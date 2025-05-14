@@ -1,41 +1,29 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial.
-As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
-Demais diretrizes constam no Moodle.
-
-**!! Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(NomeDoProjeto)_(Entrega_03)*. !!** 
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2024.2_G1_Jogo_Entrega_03*. !!** 
- 
- (Apague esses comentários)
-
-# Nome do Projeto
+# AgendaFCTE
 
 **Código da Disciplina**: FGA0208<br>
-**Número do Grupo**: XX<br>
+**Número do Grupo**: 04<br>
 **Entrega**: 03<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+
+|Matrícula | Aluno | Foto|
+| -- | -- | -- |
+| 20/2015868     | Alexandre Lema Xavier                  | <center><img src="https://github.com/AlexandreLJr.png" width="70"/> |
+| 17/0146243     | João Lucas Costa Vale                  | <center><img src="https://github.com/joaolucas102.png" width="70"/> |
+| 22/2015186     | Manoela Silvestre Garcia               | <center><img src="https://github.com/manu-sgc.png" width="70"/> |
+| 21/1030863     | Maykon Júnio dos Santos Soares         | <center><img src="https://github.com/maykonjuso.png" width="70"/> |
+| 21/1039671     | Pedro Lopes da Cunha                   | <center><img src="https://github.com/pLopess.png" width="70"/> |
+| 22/1022720     | Rayene Ferreira Almeida                | <center><img src="https://github.com/rayenealmeida.png" width="70"/> |
+| 22/2006178     | Thales Henrique Euflauzino dos Santos  | <center><img src="https://github.com/thaleseuflauzino.png" width="70"/> |
+| 22/2029243     | Victor Hugo dos Santos Bernardes       | <center><img src="https://github.com/VHbernardes.png" width="70"/> |
+| 22/2021924     | Víctor Hugo Lima Schmidt               | <center><img src="https://github.com/moonshinerd.png" width="70"/> |
+| 21/1031860     | Victório Lázaro Rocha de Morais        | <center><img src="https://github.com/Victor-oss.png" width="70"/> |
 
 ## Sobre 
-Contextualize, usando referências, links, e outros materiais como fontes.
+O AgendaFCTE é um web‑app que centraliza todos os eventos da FCTE em um só lugar, exibindo data, hora, local, descrição, link de inscrição e contato. Usuários autenticados (por e‑mail) podem filtrar a lista por tema, localização ou palavra‑chave, favoritar eventos, cadastrar novos eventos e gerenciar inscrições com controle de vagas, além de entrar em contato direto com os organizadores.
 
-## Screenshots da Terceira Entrega
-Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
+#### Histórico de Versões
 
-## Há algo a ser executado?
-
-( ) SIM
-
-( ) NÃO
-
-Se SIM, insira um manual (ou um script) para auxiliar ainda mais os interessados na execução.
-
-## Informações Complementares 
-Quaisquer outras informações adicionais podem ser descritas nessa seção.
+| Versão | Data | Descrição | Autor | Revisor | Comentário do Revisor |
+| -- | -- | -- | -- | -- | -- |
+| `1.0` | 13/05/2025 | Criação do documento | | [Thales Euflauzino](https://github.com/thaleseuflauzino) | |
