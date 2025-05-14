@@ -1,6 +1,6 @@
 
 ![logo](./assets/logo.png)
-# Arquitetura de Software <small>Entrega 3 (Modelagem)</small>
+# Arquitetura de Software <small>Entrega 3 (Padrões de Projeto)</small>
 
 > Documentação referente a todos os artefatos produzidos ao longo desta etapa
 
