@@ -33,7 +33,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/manu-sgc">Manoela Garcia</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/pLopess">Pedro Lopes</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -45,7 +45,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/manu-sgc">Manoela Garcia</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -57,7 +57,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/Victor-oss">Victório Lázaro</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/AlexandreLJr">Alexandre Xavier</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -69,7 +69,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/rayenealmeida">Rayene Almeida</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -81,7 +81,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/maykonjuso">Maykon Soares</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -96,7 +96,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/VHbernardes">Victor Bernardes</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -108,7 +108,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/joaolucas102">João Lucas</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -120,7 +120,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/joaolucas102">João Lucas</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/maykonjuso">Maykon Soares</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -132,7 +132,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/pLopess">Pedro Lopes</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -144,7 +144,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/AlexandreLJr">Alexandre Xavier</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/rayenealmeida">Rayene Almeida</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -161,7 +161,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/AlexandreLJr">Alexandre Xavier</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -173,7 +173,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/rayenealmeida">Rayene Almeida</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -187,7 +187,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/manu-sgc">Manoela Garcia</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -199,7 +199,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/AlexandreLJr">Alexandre Xavier</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/moonshinerd/">Víctor Schmidt</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
@@ -235,7 +235,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
-        <td></td>
+        <td><a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a></td>
         <td>XX/XX/25</td>
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
