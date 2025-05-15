@@ -29,6 +29,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.1.1. Abstract Factory</td>
         <td>
+          <a href="https://github.com/moonshinerd/">Víctor Schmidt</a>
+          <br>
+          <a href="https://github.com/manu-sgc">Manoela Garcia</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -38,6 +41,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.1.2. Builder</td>
         <td>
+          <a href="https://github.com/pLopess">Pedro Lopes</a>
+          <br>
+          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -47,6 +53,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.1.3. Singleton</td>
         <td>
+          <a href="https://github.com/rayenealmeida">Rayene Almeida</a>
+          <br>
+          <a href="https://github.com/Victor-oss">Victório Lázaro</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -56,6 +65,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.1.4. Factory Method</td>
         <td>
+          <a href="https://github.com/AlexandreLJr">Alexandre Xavier</a>
+          <br>
+          <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -65,6 +77,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.1.5. Prototype</td>
         <td>
+          <a href="https://github.com/joaolucas102">João Lucas</a>
+          <br>
+          <a href="https://github.com/maykonjuso">Maykon Soares</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -76,7 +91,10 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       </tr>
       <tr>
         <td>3.2.1. Bridge</td>
-        <td>
+        <td> 
+          <a href="https://github.com/moonshinerd/">Víctor Schmidt</a>
+          <br>
+          <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -86,6 +104,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.2.2. Adapter</td>
         <td>
+          <a href="https://github.com/manu-sgc">Manoela Garcia</a>
+          <br>
+          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -95,6 +116,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.2.3. Proxy</td>
         <td>
+          <a href="https://github.com/rayenealmeida">Rayene Almeida</a>
+          <br>
+          <a href="https://github.com/joaolucas102">João Lucas</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -104,6 +128,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.2.4. Flyweight</td>
         <td>
+          <a href="https://github.com/maykonjuso">Maykon Soares</a>
+          <br>
+          <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -113,6 +140,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.2.5. Facade</td>
         <td>
+          <a href="https://github.com/Victor-oss">Victório Lázaro</a>
+          <br>
+          <a href="https://github.com/AlexandreLJr">Alexandre Xavier</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -125,6 +155,11 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.3.1. Command</td>
         <td>
+          <a href="https://github.com/moonshinerd/">Víctor Schmidt</a>
+          <br>
+          <a href="https://github.com/manu-sgc">Manoela Garcia</a>
+          <br>
+          <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -134,6 +169,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.3.2. Observer</td>
         <td>
+          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
+          <br>
+          <a href="https://github.com/rayenealmeida">Rayene Almeida</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -143,6 +181,11 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.3.3. State</td>
         <td>
+          <a href="https://github.com/joaolucas102">João Lucas</a>
+          <br>
+          <a href="https://github.com/maykonjuso">Maykon Soares</a>
+          <br>
+          <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -152,6 +195,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.3.4. Iterator</td>
         <td>
+          <a href="https://github.com/Victor-oss">Victório Lázaro</a>
+          <br>
+          <a href="https://github.com/AlexandreLJr">Alexandre Xavier</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
@@ -185,6 +231,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.5.2. Modelagem do Banco de Dados</td>
         <td>
+          <a href="https://github.com/manu-sgc">Manoela Garcia</a>
+          <br>
+          <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td></td>
         <td>XX/XX/25</td>
