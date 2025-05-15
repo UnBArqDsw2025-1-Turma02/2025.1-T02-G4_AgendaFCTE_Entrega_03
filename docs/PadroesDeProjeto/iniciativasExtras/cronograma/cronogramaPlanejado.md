@@ -182,6 +182,15 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td>XX/XX/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
       </tr>
+      <tr>
+        <td>3.5.2. Modelagem do Banco de Dados</td>
+        <td>
+        </td>
+        <td></td>
+        <td>XX/XX/25</td>
+        <td>XX/XX/25</td>
+        <td>de XX/XX/25 a XX/XX/25</td>
+      </tr>
     </tbody>
   </table>
   
