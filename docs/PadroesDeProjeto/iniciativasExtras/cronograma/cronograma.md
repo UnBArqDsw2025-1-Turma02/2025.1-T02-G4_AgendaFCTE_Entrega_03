@@ -33,4 +33,4 @@ Um cronograma bem estruturado, alinhado às diretrizes do SWEBOK, é fundamental
 
 | Versão | Data | Descrição | Autor | Revisor | Comentário do Revisor |
 | -- | -- | -- | -- | -- | -- |
-| `1.0`  | 14/05/2025  | Criação do Documento     | [Víctor Schmidt](https://github.com/moonshinerd)  |  |  |
+| `1.0`  | 14/05/2025  | Criação do Documento     | [Víctor Schmidt](https://github.com/moonshinerd)  | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Boa organização! |
