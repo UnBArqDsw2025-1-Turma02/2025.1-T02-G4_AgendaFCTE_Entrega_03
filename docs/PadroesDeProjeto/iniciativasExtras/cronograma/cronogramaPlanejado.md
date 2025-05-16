@@ -19,7 +19,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <th>Revisor</th>
         <th>Início</th>
         <th>Prazo</th>
-        <th>Período de revisão</th>
+        <th>Revisã</th>
       </tr>
     </thead>
     <tbody>
@@ -34,9 +34,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/manu-sgc">Manoela Garcia</a>
         </td>
         <td><a href="https://github.com/pLopess">Pedro Lopes</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>15/05/25</td>
+        <td>20/05/25</td>
+        <td>20/05/25</td>
       </tr>
       <tr>
         <td>3.1.2. Builder</td>
@@ -46,9 +46,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/manu-sgc">Manoela Garcia</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>15/05/25</td>
+        <td>20/05/25</td>
+        <td>20/05/25</td>
       </tr>
       <tr>
         <td>3.1.3. Singleton</td>
@@ -58,9 +58,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/Victor-oss">Victório Lázaro</a>
         </td>
         <td><a href="https://github.com/AlexandreLJr">Alexandre Xavier</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>15/05/25</td>
+        <td>20/05/25</td>
+        <td>20/05/25</td>
       </tr>
       <tr>
         <td>3.1.4. Factory Method</td>
@@ -70,9 +70,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td><a href="https://github.com/rayenealmeida">Rayene Almeida</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>15/05/25</td>
+        <td>20/05/25</td>
+        <td>20/05/25</td>
       </tr>
       <tr>
         <td>3.1.5. Prototype</td>
@@ -82,9 +82,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/maykonjuso">Maykon Soares</a>
         </td>
         <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>15/05/25</td>
+        <td>20/05/25</td>
+        <td>20/05/25</td>
       </tr>
       <tr>
         <td colspan="6"><center><strong>3.2. Padrões de Projeto GoFs Estruturais</strong></center></td>
@@ -97,8 +97,8 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
         <td><a href="https://github.com/VHbernardes">Victor Bernardes</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
+        <td>21/05/25</td>
+        <td>27/05/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
       </tr>
       <tr>
@@ -109,8 +109,8 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/joaolucas102">João Lucas</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
+        <td>21/05/25</td>
+        <td>27/05/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
       </tr>
       <tr>
@@ -121,8 +121,8 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/joaolucas102">João Lucas</a>
         </td>
         <td><a href="https://github.com/maykonjuso">Maykon Soares</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
+        <td>21/05/25</td>
+        <td>27/05/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
       </tr>
       <tr>
@@ -133,8 +133,8 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td><a href="https://github.com/pLopess">Pedro Lopes</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
+        <td>21/05/25</td>
+        <td>27/05/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
       </tr>
       <tr>
@@ -145,8 +145,8 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/AlexandreLJr">Alexandre Xavier</a>
         </td>
         <td><a href="https://github.com/rayenealmeida">Rayene Almeida</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
+        <td>21/05/25</td>
+        <td>27/05/25</td>
         <td>de XX/XX/25 a XX/XX/25</td>
       </tr>
       <tr>
@@ -162,9 +162,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
         <td><a href="https://github.com/AlexandreLJr">Alexandre Xavier</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>24/05/25</td>
+        <td>30/05/25</td>
+        <td>30/05/25</td>
       </tr>
       <tr>
         <td>3.3.2. Observer</td>
@@ -174,9 +174,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/rayenealmeida">Rayene Almeida</a>
         </td>
         <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>24/05/25</td>
+        <td>30/05/25</td>
+        <td>30/05/25</td>
       </tr>
       <tr>
         <td>3.3.3. State</td>
@@ -188,9 +188,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td><a href="https://github.com/manu-sgc">Manoela Garcia</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>24/05/25</td>
+        <td>30/05/25</td>
+        <td>30/05/25</td>
       </tr>
       <tr>
         <td>3.3.4. Iterator</td>
@@ -200,9 +200,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/AlexandreLJr">Alexandre Xavier</a>
         </td>
         <td><a href="https://github.com/moonshinerd/">Víctor Schmidt</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>24/05/25</td>
+        <td>30/05/25</td>
+        <td>30/05/25</td>
       </tr>
       <tr>
         <td colspan="6"><center><strong>3.4. Participações - Padrões de Projeto</strong></center></td>
@@ -213,9 +213,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/moonshinerd">Víctor Schmidt</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>27/05/25</td>
+        <td>30/05/25</td>
+        <td>30/05/2025</td>
       </tr>
       <tr>
         <td colspan="6"><center><strong>3.5. Iniciativas Extras - Padrões de Projeto</strong></center></td>
@@ -224,9 +224,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td>3.5.1. Cronograma Planejado e Executado</td>
         <td><a href="https://github.com/moonshinerd/">Víctor Schmidt</a></td>
         <td><a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>14/05/25</td>
+        <td>15/05/25</td>
+        <td>15/05/25</td>
       </tr>
       <tr>
         <td>3.5.2. Modelagem do Banco de Dados</td>
@@ -236,9 +236,9 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td><a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a></td>
-        <td>XX/XX/25</td>
-        <td>XX/XX/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>27/05/25</td>
+        <td>31/05/25</td>
+        <td>31/05/25</td>
       </tr>
     </tbody>
   </table>
@@ -260,4 +260,5 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
 
 | Versão | Data | Descrição | Autor | Revisor | Comentário do Revisor |
 | -- | -- | -- | -- | -- | -- |
-| `1.0`  | 14/05/2025  | Criação do Documento     | [Víctor Schmidt](https://github.com/moonshinerd)  |  |  |
+| `1.0`  | 14/05/2025  | Criação do Documento    | [Víctor Schmidt](https://github.com/moonshinerd)  |  |  |
+| `1.1`  | 15/05/2025  | Adicionando Autores e Revisores      | [Víctor Schmidt](https://github.com/moonshinerd)  |  |  |
