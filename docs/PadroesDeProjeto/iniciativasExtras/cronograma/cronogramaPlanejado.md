@@ -31,7 +31,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td>
           <a href="https://github.com/moonshinerd/">Víctor Schmidt</a>
           <br>
-          <a href="https://github.com/manu-sgc">Manoela Garcia</a>
+          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/pLopess">Pedro Lopes</a></td>
         <td>15/05/25</td>
@@ -43,9 +43,10 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td>
           <a href="https://github.com/pLopess">Pedro Lopes</a>
           <br>
-          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
+          <a href="https://github.com/manu-sgc">Manoela Garcia</a>
+          <br>
         </td>
-        <td><a href="https://github.com/manu-sgc">Manoela Garcia</a></td>
+        <td><a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a></td>
         <td>15/05/25</td>
         <td>20/05/25</td>
         <td>20/05/25</td>
@@ -94,7 +95,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td> 
           <a href="https://github.com/moonshinerd/">Víctor Schmidt</a>
           <br>
-          <a href="https://github.com/pLopess">Pedro Lopes</a>
+          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/VHbernardes">Victor Bernardes</a></td>
         <td>21/05/25</td>
@@ -106,7 +107,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td>
           <a href="https://github.com/manu-sgc">Manoela Garcia</a>
           <br>
-          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
+          <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
         <td><a href="https://github.com/joaolucas102">João Lucas</a></td>
         <td>21/05/25</td>
@@ -159,7 +160,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
           <br>
           <a href="https://github.com/manu-sgc">Manoela Garcia</a>
           <br>
-          <a href="https://github.com/pLopess">Pedro Lopes</a>
+          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/AlexandreLJr">Alexandre Xavier</a></td>
         <td>24/05/25</td>
@@ -169,7 +170,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
       <tr>
         <td>3.3.2. Observer</td>
         <td>
-          <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
+          <a href="https://github.com/pLopess">Pedro Lopes</a>
           <br>
           <a href="https://github.com/rayenealmeida">Rayene Almeida</a>
         </td>
