@@ -19,7 +19,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <th>Revisor</th>
         <th>Início</th>
         <th>Prazo</th>
-        <th>Revisã</th>
+        <th>Revisão</th>
       </tr>
     </thead>
     <tbody>
