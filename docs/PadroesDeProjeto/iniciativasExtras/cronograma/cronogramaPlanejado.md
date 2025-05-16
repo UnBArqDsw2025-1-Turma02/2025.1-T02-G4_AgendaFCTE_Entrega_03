@@ -261,5 +261,5 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
 
 | Versão | Data | Descrição | Autor | Revisor | Comentário do Revisor |
 | -- | -- | -- | -- | -- | -- |
-| `1.0`  | 14/05/2025  | Criação do Documento    | [Víctor Schmidt](https://github.com/moonshinerd)  |  |  |
-| `1.1`  | 15/05/2025  | Adicionando Autores e Revisores      | [Víctor Schmidt](https://github.com/moonshinerd)  |  |  |
+| `1.0`  | 14/05/2025  | Criação do Documento    | [Víctor Schmidt](https://github.com/moonshinerd)  | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Boa organização! |
+| `1.1`  | 15/05/2025  | Adicionando Autores e Revisores  | [Víctor Schmidt](https://github.com/moonshinerd)  | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Bom trabalho! |
