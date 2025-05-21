@@ -48,19 +48,22 @@ class Evento implements Prototype<Evento> {
   set descricao(novaDescricao: string) {
     this._descricao = novaDescricao;
   }
+  set local(novolocal: string) {
+    this._local = novolocal;
+  }
 }
 
 const eventoOriginal = new Evento(
   1,
-  "Game Dev Summit",
-  "Evento para desenvolvedores de jogos",
-  "São Paulo",
-  "Tecnologia",
+  "Rei da Derivada",
+  "Evento para treinar habilidade com cálculo 1",
+  "Campus FCTE - GAMA/DF",
+  "Matemática",
   1001
 );
 
 const eventoClonado = eventoOriginal.clone();
-eventoClonado.titulo = "Game Dev Summit - Edição RJ";
+eventoClonado.local = "Campus Darcy Ribeiro - BRASÍLIA/DF";
 
-console.log("Evento Original:", eventoOriginal);
-console.log("Evento Clonado:", eventoClonado);
+console.log(eventoOriginal);
+console.log(eventoClonado);
