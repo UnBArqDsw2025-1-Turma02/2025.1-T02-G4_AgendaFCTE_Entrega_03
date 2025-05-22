@@ -1,7 +1,6 @@
 ```plantuml
 @startuml Abstract Factory
 
-' ==== Interface de Fábrica (Abstração) ====
 interface AgendaComponentFactory {
   +createEventList()
   +createFilterPanel()
@@ -21,9 +20,7 @@ interface AgendaComponentFactory {
   +createAccessControlComponent()
   +createEngagementComponent()
 }
-' ==== Fim da Interface de Fábrica (Abstração) ====
 
-' ==== Fábricas Concretas (Implementações da Interface de Fábrica) ====
 class VisitorComponentFactory {
   +createEventList()
   +createFilterPanel()
@@ -101,16 +98,12 @@ class AdminComponentFactory {
   +createEngagementComponent()
   +createModerationComponent()
 }
-' ==== Fim das Fábricas Concretas (Implementações da Interface de Fábrica) ====
-' ==== Relacionamentos ====
+
 AgendaComponentFactory <|.. VisitorComponentFactory
 AgendaComponentFactory <|.. AuthComponentFactory
 AgendaComponentFactory <|.. OrganizerComponentFactory
 AgendaComponentFactory <|.. AdminComponentFactory
-' ==== Fim dos Relacionamentos ====
 
-
-' ==== Interfaces de Produto (Abstração de Produtos) ====
 interface RecommendationComponent {
   +render()
   +showRecommendations()
@@ -169,7 +162,6 @@ interface EngagementComponent {
   +likeEvent()
   +dislikeEvent()
 }
-' === Fim das Interfaces de Produto ====
 
 class VisitorRecommendationComponent {
   +render()
@@ -180,11 +172,9 @@ class AuthRecommendationComponent {
   +showRecommendations()
 }
 
-' ==== Relacionamentos ====
+
 RecommendationComponent <|.. VisitorRecommendationComponent
 RecommendationComponent <|.. AuthRecommendationComponent
-' ==== Fim dos Relacionamentos ====
-
 
 class AuthParticipationComponent {
   +render()
@@ -192,9 +182,22 @@ class AuthParticipationComponent {
   +confirmPresence()
 }
 
-' ==== Relacionamentos ====
-ParticipationComponent <|.x. AuthParticipationComponent
-' ==== Fim do Relacionamentos ====
+
+
+
+
+
+
+
+
+
+
+
+
+
+ParticipationComponent <|.. AuthParticipationComponent
+
+
 
 class VisitorSocialIntegrationComponent {
   +render()
@@ -212,12 +215,11 @@ class AdminSocialIntegrationComponent {
   +render()
   +share(platform)
 }
-' ==== Relacionamentos ====
 SocialIntegrationComponent <|.. VisitorSocialIntegrationComponent
 SocialIntegrationComponent <|.. AuthSocialIntegrationComponent
 SocialIntegrationComponent <|.. OrganizerSocialIntegrationComponent
 SocialIntegrationComponent <|.. AdminSocialIntegrationComponent
-' ==== Fim dos Relacionamentos ====
+
 class VisitorMapAndCalendarComponent {
   +render()
   +openMap()
@@ -238,12 +240,11 @@ class AdminMapAndCalendarComponent {
   +openMap()
   +addToCalendar()
 }
-' ==== Relacionamentos ====
 MapAndCalendarComponent <|.. VisitorMapAndCalendarComponent
 MapAndCalendarComponent <|.. AuthMapAndCalendarComponent
 MapAndCalendarComponent <|.. OrganizerMapAndCalendarComponent
 MapAndCalendarComponent <|.. AdminMapAndCalendarComponent
-' ==== Fim dos Relacionamentos ====
+
 class VisitorCommentsAndRatingComponent {
   +render()
   +comment()
@@ -254,12 +255,10 @@ class AuthCommentsAndRatingComponent {
   +comment()
   +rate()
 }
-=
-' ==== Relacionamentos ====
+
 CommentsAndRatingComponent <|.. VisitorCommentsAndRatingComponent
 CommentsAndRatingComponent <|.. AuthCommentsAndRatingComponent
-' ==== Fim dos Relacionamentos ====
-=
+
 
 class VisitorHistoryComponent {
   +render()
@@ -270,10 +269,10 @@ class AuthHistoryComponent {
   +viewPastEvents()
 }
 
-' ==== Relacionamentos ====
+
 HistoryComponent <|.. VisitorHistoryComponent
 HistoryComponent <|.. AuthHistoryComponent
-' ==== Fim dos Relacionamentos ====
+
 
 class AdminModerationComponent {
   +render()
@@ -287,9 +286,8 @@ class AuthTagManagementComponent {
   +addTag()
   +removeTag()
 }
-' ==== Relacionamentos ====
 TagManagementComponent <|.. AuthTagManagementComponent
-' ==== Fim dos Relacionamentos ====
+
 class AuthNotificationSettingsComponent {
   +render()
   +configure()
@@ -302,11 +300,11 @@ class AdminNotificationSettingsComponent {
   +render()
   +configure()
 }
-' ==== Relacionamentos ====
+
 NotificationSettingsComponent <|.. AuthNotificationSettingsComponent
 NotificationSettingsComponent <|.. OrganizerNotificationSettingsComponent
 NotificationSettingsComponent <|.. AdminNotificationSettingsComponent
-' ==== Fim dos Relacionamentos ====
+
 class AuthEventSuggestionComponent {
   +render()
   +suggestEvent()
@@ -325,12 +323,10 @@ class AdminCertificateComponent {
   +render()
   +generateCertificate()
 }
-' ==== Relacionamentos ====
 CertificateComponent <|.. AuthCertificateComponent
 CertificateComponent <|.. OrganizerCertificateComponent
 CertificateComponent <|.. AdminCertificateComponent
-' ==== Fim dos Relacionamentos ====
-' ==== Produtos Concretos (Implementações das Interfaces de Produto) ====
+
 class AuthAccessControlComponent {
   +render()
   +checkAccess()
@@ -343,20 +339,16 @@ class AdminAccessControlComponent {
   +render()
   +checkAccess()
 }
-' ==== Relacionamentos ====
 AccessControlComponent <|.. AuthAccessControlComponent
 AccessControlComponent <|.. OrganizerAccessControlComponent
 AccessControlComponent <|.. AdminAccessControlComponent
-' ==== Fim dos Relacionamentos ====
+
 class AuthEngagementComponent {
   +render()
   +likeEvent()
   +dislikeEvent()
 }
-' ==== Relacionamentos ====
 EngagementComponent <|.. AuthEngagementComponent
-' ==== Fim dos Relacionamentos ====
-' ==== Fim dos Produtos Concretos (Implementações das Interfaces de Produto) ====
 
 @enduml
 
