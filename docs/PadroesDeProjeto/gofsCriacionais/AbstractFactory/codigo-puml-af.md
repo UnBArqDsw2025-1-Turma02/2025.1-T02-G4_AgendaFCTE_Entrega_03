@@ -1,6 +1,7 @@
 ```plantuml
 @startuml Abstract Factory
 
+' ==== Interface de Fábrica (Abstração) ====
 interface AgendaComponentFactory {
   +createEventList()
   +createFilterPanel()
@@ -20,7 +21,9 @@ interface AgendaComponentFactory {
   +createAccessControlComponent()
   +createEngagementComponent()
 }
+' ==== Fim da Interface de Fábrica (Abstração) ====
 
+' ==== Fábricas Concretas (Implementações da Interface de Fábrica) ====
 class VisitorComponentFactory {
   +createEventList()
   +createFilterPanel()
@@ -98,12 +101,16 @@ class AdminComponentFactory {
   +createEngagementComponent()
   +createModerationComponent()
 }
-
+' ==== Fim das Fábricas Concretas (Implementações da Interface de Fábrica) ====
+' ==== Relacionamentos ====
 AgendaComponentFactory <|.. VisitorComponentFactory
 AgendaComponentFactory <|.. AuthComponentFactory
 AgendaComponentFactory <|.. OrganizerComponentFactory
 AgendaComponentFactory <|.. AdminComponentFactory
+' ==== Fim dos Relacionamentos ====
 
+
+' ==== Interfaces de Produto (Abstração de Produtos) ====
 interface RecommendationComponent {
   +render()
   +showRecommendations()
@@ -162,6 +169,7 @@ interface EngagementComponent {
   +likeEvent()
   +dislikeEvent()
 }
+' === Fim das Interfaces de Produto ====
 
 class VisitorRecommendationComponent {
   +render()
@@ -171,52 +179,22 @@ class AuthRecommendationComponent {
   +render()
   +showRecommendations()
 }
-' class OrganizerRecommendationComponent {
-'   +render()
-'   +showRecommendations()
-' }
 
-' Organizador ve recomendacoes?
-
-' class AdminRecommendationComponent {
-'   +render()
-'   +showRecommendations()
-' } 
-'
-' Admin ve recomendacoes?
-
+' ==== Relacionamentos ====
 RecommendationComponent <|.. VisitorRecommendationComponent
 RecommendationComponent <|.. AuthRecommendationComponent
-' RecommendationComponent <|.. OrganizerRecommendationComponent
-' RecommendationComponent <|.. AdminRecommendationComponent
+' ==== Fim dos Relacionamentos ====
 
-' class VisitorParticipationComponent {
-'   +render()
-'   +register()
-'   +confirmPresence()
-' }
+
 class AuthParticipationComponent {
   +render()
   +register()
   +confirmPresence()
 }
-' class OrganizerParticipationComponent {
-'   +render()
-'   +register()
-'   +confirmPresence()
-' }
-' class AdminParticipationComponent {
-'   +render()
-'   +register()
-'   +confirmPresence()
-' }
 
-' Visitor, Organizer e Admin confirmam/ve participacao?
-
-' ParticipationComponent <|.. VisitorParticipationComponent
-ParticipationComponent <|.. AuthParticipationComponent
-' ParticipationComponent <|.. OrganizerParticipationComponent
-' ParticipationComponent <|.. AdminParticipationComponent
+' ==== Relacionamentos ====
+ParticipationComponent <|.x. AuthParticipationComponent
+' ==== Fim do Relacionamentos ====
 
 class VisitorSocialIntegrationComponent {
   +render()
@@ -234,11 +212,12 @@ class AdminSocialIntegrationComponent {
   +render()
   +share(platform)
 }
+' ==== Relacionamentos ====
 SocialIntegrationComponent <|.. VisitorSocialIntegrationComponent
 SocialIntegrationComponent <|.. AuthSocialIntegrationComponent
 SocialIntegrationComponent <|.. OrganizerSocialIntegrationComponent
 SocialIntegrationComponent <|.. AdminSocialIntegrationComponent
-
+' ==== Fim dos Relacionamentos ====
 class VisitorMapAndCalendarComponent {
   +render()
   +openMap()
@@ -259,11 +238,12 @@ class AdminMapAndCalendarComponent {
   +openMap()
   +addToCalendar()
 }
+' ==== Relacionamentos ====
 MapAndCalendarComponent <|.. VisitorMapAndCalendarComponent
 MapAndCalendarComponent <|.. AuthMapAndCalendarComponent
 MapAndCalendarComponent <|.. OrganizerMapAndCalendarComponent
 MapAndCalendarComponent <|.. AdminMapAndCalendarComponent
-
+' ==== Fim dos Relacionamentos ====
 class VisitorCommentsAndRatingComponent {
   +render()
   +comment()
@@ -274,23 +254,12 @@ class AuthCommentsAndRatingComponent {
   +comment()
   +rate()
 }
-' class OrganizerCommentsAndRatingComponent {
-'   +render()
-'   +comment()
-'   +rate()
-' }
-' class AdminCommentsAndRatingComponent {
-'   +render()
-'   +comment()
-'   +rate()
-' }
-
-' Visitor e Auth comentam e avaliam?
-
+=
+' ==== Relacionamentos ====
 CommentsAndRatingComponent <|.. VisitorCommentsAndRatingComponent
 CommentsAndRatingComponent <|.. AuthCommentsAndRatingComponent
-' CommentsAndRatingComponent <|.. OrganizerCommentsAndRatingComponent
-' CommentsAndRatingComponent <|.. AdminCommentsAndRatingComponent
+' ==== Fim dos Relacionamentos ====
+=
 
 class VisitorHistoryComponent {
   +render()
@@ -300,21 +269,11 @@ class AuthHistoryComponent {
   +render()
   +viewPastEvents()
 }
-' class OrganizerHistoryComponent {
-'   +render()
-'   +viewPastEvents()
-' }
-' class AdminHistoryComponent {
-'   +render()
-'   +viewPastEvents()
-' }
 
-' Visitor e Auth veem eventos passados?
-
+' ==== Relacionamentos ====
 HistoryComponent <|.. VisitorHistoryComponent
 HistoryComponent <|.. AuthHistoryComponent
-' HistoryComponent <|.. OrganizerHistoryComponent
-' HistoryComponent <|.. AdminHistoryComponent
+' ==== Fim dos Relacionamentos ====
 
 class AdminModerationComponent {
   +render()
@@ -328,8 +287,9 @@ class AuthTagManagementComponent {
   +addTag()
   +removeTag()
 }
+' ==== Relacionamentos ====
 TagManagementComponent <|.. AuthTagManagementComponent
-
+' ==== Fim dos Relacionamentos ====
 class AuthNotificationSettingsComponent {
   +render()
   +configure()
@@ -342,11 +302,11 @@ class AdminNotificationSettingsComponent {
   +render()
   +configure()
 }
-
+' ==== Relacionamentos ====
 NotificationSettingsComponent <|.. AuthNotificationSettingsComponent
 NotificationSettingsComponent <|.. OrganizerNotificationSettingsComponent
 NotificationSettingsComponent <|.. AdminNotificationSettingsComponent
-
+' ==== Fim dos Relacionamentos ====
 class AuthEventSuggestionComponent {
   +render()
   +suggestEvent()
@@ -365,10 +325,12 @@ class AdminCertificateComponent {
   +render()
   +generateCertificate()
 }
+' ==== Relacionamentos ====
 CertificateComponent <|.. AuthCertificateComponent
 CertificateComponent <|.. OrganizerCertificateComponent
 CertificateComponent <|.. AdminCertificateComponent
-
+' ==== Fim dos Relacionamentos ====
+' ==== Produtos Concretos (Implementações das Interfaces de Produto) ====
 class AuthAccessControlComponent {
   +render()
   +checkAccess()
@@ -381,16 +343,20 @@ class AdminAccessControlComponent {
   +render()
   +checkAccess()
 }
+' ==== Relacionamentos ====
 AccessControlComponent <|.. AuthAccessControlComponent
 AccessControlComponent <|.. OrganizerAccessControlComponent
 AccessControlComponent <|.. AdminAccessControlComponent
-
+' ==== Fim dos Relacionamentos ====
 class AuthEngagementComponent {
   +render()
   +likeEvent()
   +dislikeEvent()
 }
+' ==== Relacionamentos ====
 EngagementComponent <|.. AuthEngagementComponent
+' ==== Fim dos Relacionamentos ====
+' ==== Fim dos Produtos Concretos (Implementações das Interfaces de Produto) ====
 
 @enduml
 
