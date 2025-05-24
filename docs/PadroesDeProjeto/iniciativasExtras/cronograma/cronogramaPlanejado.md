@@ -100,7 +100,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td><a href="https://github.com/VHbernardes">Victor Bernardes</a></td>
         <td>21/05/25</td>
         <td>27/05/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>27/05/25</td>
       </tr>
       <tr>
         <td>3.2.2. Adapter</td>
@@ -112,7 +112,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td><a href="https://github.com/joaolucas102">João Lucas</a></td>
         <td>21/05/25</td>
         <td>27/05/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>27/05/25</td>
       </tr>
       <tr>
         <td>3.2.3. Proxy</td>
@@ -124,7 +124,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td><a href="https://github.com/maykonjuso">Maykon Soares</a></td>
         <td>21/05/25</td>
         <td>27/05/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>27/05/25</td>
       </tr>
       <tr>
         <td>3.2.4. Flyweight</td>
@@ -136,7 +136,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td><a href="https://github.com/pLopess">Pedro Lopes</a></td>
         <td>21/05/25</td>
         <td>27/05/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>27/05/25</td>
       </tr>
       <tr>
         <td>3.2.5. Facade</td>
@@ -148,7 +148,7 @@ A seguir, apresentamos a Tabela 1 com o planejamento completo dessa entrega:
         <td><a href="https://github.com/rayenealmeida">Rayene Almeida</a></td>
         <td>21/05/25</td>
         <td>27/05/25</td>
-        <td>de XX/XX/25 a XX/XX/25</td>
+        <td>27/05/25</td>
       </tr>
       <tr>
         <td colspan="6"><center><strong>3.3. Padrões de Projeto GoFs Comportamentais</strong></center></td>
