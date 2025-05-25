@@ -1,0 +1,61 @@
+```puml
+@startuml Builder
+
+class Evento {
+  - titulo: String
+  - descricao: String
+  - local: String
+  - dataHora: String
+  - linkInscricao: String
+  - vagas: int
+  - categoria: String
+}
+
+abstract class EventoBuilder {
+  # evento: Evento
+  + getEvento(): Evento
+  + createNewEvento()
+  + buildTitulo()
+  + buildDescricao()
+  + buildLocal()
+  + buildDataHora()
+  + buildLinkInscricao()
+  + buildVagas()
+  + buildCategoria()
+}
+
+class EventoAcademicoBuilder {
+  + buildTitulo()
+  + buildDescricao()
+  + buildLocal()
+  + buildDataHora()
+  + buildLinkInscricao()
+  + buildVagas()
+  + buildCategoria()
+}
+
+class EventoCulturalBuilder {
+  + buildTitulo()
+  + buildDescricao()
+  + buildLocal()
+  + buildDataHora()
+  + buildLinkInscricao()
+  + buildVagas()
+  + buildCategoria()
+}
+
+class Organizador {
+  - eventoBuilder: EventoBuilder
+  + setEventoBuilder(EventoBuilder)
+  + getEvento(): Evento
+  + construirEvento()
+}
+
+' Relacionamentos
+EventoBuilder <|-- EventoAcademicoBuilder
+EventoBuilder <|-- EventoCulturalBuilder
+
+Organizador --> EventoBuilder : usa
+Organizador --> Evento : cria
+
+@enduml
