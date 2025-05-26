@@ -1,7 +1,8 @@
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.ArrayList;
 
-public class Evento {
+class Evento {
     private String titulo;
     private String descricao;
     private String local;
@@ -9,6 +10,17 @@ public class Evento {
     private String linkInscricao;
     private int vagas;
     private List<String> categorias;
+
+    public Evento(String titulo, String descricao, String local, LocalDateTime dataHora,
+        String linkInscricao, int vagas, List<String> categorias) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.local = local;
+        this.dataHora = dataHora;
+        this.linkInscricao = linkInscricao;
+        this.vagas = vagas;
+        this.categorias = categorias;
+    }
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
@@ -50,7 +62,7 @@ public class Evento {
     }
 }
 
-public class Agenda {
+class Agenda {
     private static Agenda instancia;
 
     private List<Evento> eventos;
@@ -78,5 +90,33 @@ public class Agenda {
                 System.out.println(evento);
             }
         }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Agenda agenda1 = Agenda.getInstance();
+        Evento evento1 = new Evento(
+            "Workshop de Java",
+            "Aprenda conceitos avançados de Java",
+            "FGA Sala I10",
+            LocalDateTime.of(2025, 6, 1, 14, 0),
+            "http://inscricao.com/java",
+            50,
+            List.of("Programação", "Java", "Backend")
+        );
+        agenda1.addEvento(evento1);
+        Agenda agenda2 =  Agenda.getInstance();
+        Evento evento2 = new Evento(
+            "Introdução ao Spring Boot",
+            "Workshop prático sobre desenvolvimento com Spring Boot",
+            "FGA Sala S10",
+            LocalDateTime.of(2025, 6, 2, 10, 30),
+            "http://inscricao.com/springboot",
+            40,
+            List.of("Java", "Spring", "Desenvolvimento Web")
+        );
+        agenda2.addEvento(evento2);
+        agenda2.listarEventos();
     }
 }
