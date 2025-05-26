@@ -98,9 +98,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/VHbernardes">Victor Bernardes</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>22/05/25</td>
+        <td>24/05/25</td>
+        <td>25/05/25</td>
       </tr>
       <tr>
         <td>3.2.2. Adapter</td>

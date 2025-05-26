@@ -11,6 +11,7 @@
         - [3.1.2.1.Código PUML](./PadroesDeProjeto/gofsCriacionais/Builder/builder-puml.md)
       - [3.1.5. Prototype](./PadroesDeProjeto/gofsCriacionais/Prototype/3.1.5.Prototype.md)
     - [3.2. Padrões de Projeto GoFs Estruturais](./PadroesDeProjeto/gofsEstruturais/3.2.GoFsEstruturais.md)
+      - [3.2.1. Bridge](./PadroesDeProjeto/gofsEstruturais/Bridge/3.2.1.Bridge.md)
     - [3.3. Padrões de Projeto GoFs Comportamentais](./PadroesDeProjeto/gofsComportamentais/3.3.GoFsComportamentais.md)
     - [3.4. Participações - Padrões de Projeto](./PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](./PadroesDeProjeto/iniciativasExtras/3.5.IniciativasExtras.md)
