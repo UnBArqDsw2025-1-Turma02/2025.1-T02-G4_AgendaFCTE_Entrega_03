@@ -1,4 +1,5 @@
-﻿@startuml Command
+﻿```plantuml
+@startuml Command
 title Padrão Command aplicado ao AgendaFCTE - Ações sobre Evento
 
 ' Interface do Command
@@ -119,3 +120,5 @@ class Usuario {
 }
 
 @enduml
+
+```
