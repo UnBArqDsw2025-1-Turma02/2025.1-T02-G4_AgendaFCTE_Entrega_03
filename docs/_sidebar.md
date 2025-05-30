@@ -14,6 +14,8 @@
     - [3.2. Padrões de Projeto GoFs Estruturais](./PadroesDeProjeto/gofsEstruturais/3.2.GoFsEstruturais.md)
       - [3.2.1. Bridge](./PadroesDeProjeto/gofsEstruturais/Bridge/3.2.1.Bridge.md)
       - [3.2.2. Facade](./PadroesDeProjeto/gofsEstruturais/Facade/3.2.2.Facade.md)
+      - [3.2.3. Proxy](./PadroesDeProjeto/gofsEstruturais/Proxy/3.2.3.Proxy.md)
+      - [3.2.4. Flyweight](./PadroesDeProjeto/gofsEstruturais/Flyweight/3.2.4.Flyweight.md)
     - [3.3. Padrões de Projeto GoFs Comportamentais](./PadroesDeProjeto/gofsComportamentais/3.3.GoFsComportamentais.md)
       - [3.3.2. Observer](./PadroesDeProjeto/gofsComportamentais/Observer/3.3.2.Observer.md)
     - [3.4. Participações - Padrões de Projeto](./PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
