@@ -47,9 +47,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <br>
         </td>
         <td><a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>22/05/25</td>
+        <td>23/05/25</td>
+        <td>23/05/25</td>
       </tr>
       <tr>
         <td>3.1.3. Singleton</td>
@@ -83,9 +83,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/maykonjuso">Maykon Soares</a>
         </td>
         <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>22/05/2025</td>
+        <td>25/05/2025</td>
+        <td>26/05/2025</td>
       </tr>
       <tr>
         <td colspan="6"><center><strong>3.2. Padrões de Projeto GoFs Estruturais</strong></center></td>
@@ -110,9 +110,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
         <td><a href="https://github.com/joaolucas102">João Lucas</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>26/05/25</td>
+        <td>30/05/25</td>
+        <td>31/05/25</td>
       </tr>
       <tr>
         <td>3.2.3. Proxy</td>
@@ -163,9 +163,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/AlexandreLJr">Alexandre Xavier</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>27/05/25</td>
+        <td>30/05/25</td>
+        <td>30/05/25</td>
       </tr>
       <tr>
         <td>3.3.2. Observer</td>
@@ -177,7 +177,7 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
         <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
         <td>26/05/2025</td>
         <td>29/05/2025</td>
-        <td>XX/XX/XX</td>
+        <td>29/05/2025</td>
       </tr>
       <tr>
         <td>3.3.3. State</td>
@@ -263,3 +263,4 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
 | -- | -- | -- | -- | -- | -- |
 | `1.0`  | 22/05/2025  | Criação do Documento e Ajustes de Artefatos Finalizados   | [Víctor Schmidt](https://github.com/moonshinerd)  | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Tudo Certo! |
 | `1.1`  | 29/05/2025  | Datas de execução dos artefatos: Proxy e Observer e data de revisão: Facade  |  |  |
+| `1.2`  | 30/05/2025  | Datas de execução dos artefatos e revisão: Builder, Adapter  | [Pedro Lopes](https://github.com/pLopess) |  |
