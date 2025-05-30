@@ -17,7 +17,12 @@
       - [3.2.3. Proxy](./PadroesDeProjeto/gofsEstruturais/Proxy/3.2.3.Proxy.md)
       - [3.2.4. Flyweight](./PadroesDeProjeto/gofsEstruturais/Flyweight/3.2.4.Flyweight.md)
     - [3.3. Padrões de Projeto GoFs Comportamentais](./PadroesDeProjeto/gofsComportamentais/3.3.GoFsComportamentais.md)
+
+      - [3.3.1. Command](./PadroesDeProjeto/gofsComportamentais/Command/3.3.1.Command.md)
+        - [3.3.1.1.Código PUML](./PadroesDeProjeto/gofsComportamentais/Command/command-puml.md)
+
       - [3.3.2. Observer](./PadroesDeProjeto/gofsComportamentais/Observer/3.3.2.Observer.md)
+
     - [3.4. Participações - Padrões de Projeto](./PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](./PadroesDeProjeto/iniciativasExtras/3.5.IniciativasExtras.md)
       - [3.5.1. Cronograma](./PadroesDeProjeto/iniciativasExtras/cronograma/cronograma.md)
