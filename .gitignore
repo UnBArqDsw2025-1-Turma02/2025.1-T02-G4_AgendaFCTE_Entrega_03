@@ -1,2 +1,7 @@
 venv/
+
 __pycache__
+docs/assets/Facade/codigo/*.class
+docs/assets/Singleton/codigo/Agenda.class
+docs/assets/Singleton/codigo/Evento.class
+docs/assets/Singleton/codigo/Main.class
