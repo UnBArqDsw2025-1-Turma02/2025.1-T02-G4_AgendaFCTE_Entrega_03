@@ -112,7 +112,7 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
         <td><a href="https://github.com/joaolucas102">João Lucas</a></td>
         <td>26/05/25</td>
         <td>30/05/25</td>
-        <td>XX/XX/XX</td>
+        <td>31/05/25</td>
       </tr>
       <tr>
         <td>3.2.3. Proxy</td>
@@ -263,3 +263,4 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
 | -- | -- | -- | -- | -- | -- |
 | `1.0`  | 22/05/2025  | Criação do Documento e Ajustes de Artefatos Finalizados   | [Víctor Schmidt](https://github.com/moonshinerd)  | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Tudo Certo! |
 | `1.1`  | 29/05/2025  | Datas de execução dos artefatos: Proxy e Observer e data de revisão: Facade  |  |  |
+| `1.2`  | 30/05/2025  | Datas de execução dos artefatos e revisão: Builder, Adapter  | [Pedro Lopes](https://github.com/pLopess) |  |
