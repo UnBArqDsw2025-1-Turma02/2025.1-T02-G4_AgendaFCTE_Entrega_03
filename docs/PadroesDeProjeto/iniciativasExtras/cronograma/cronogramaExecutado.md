@@ -83,9 +83,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/maykonjuso">Maykon Soares</a>
         </td>
         <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>22/05/2025</td>
+        <td>25/05/2025</td>
+        <td>26/05/2025</td>
       </tr>
       <tr>
         <td colspan="6"><center><strong>3.2. Padrões de Projeto GoFs Estruturais</strong></center></td>
@@ -177,7 +177,7 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
         <td><a href="https://github.com/Victor-oss">Victório Lázaro</a></td>
         <td>26/05/2025</td>
         <td>29/05/2025</td>
-        <td>XX/XX/XX</td>
+        <td>29/05/2025</td>
       </tr>
       <tr>
         <td>3.3.3. State</td>
