@@ -163,9 +163,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a>
         </td>
         <td><a href="https://github.com/AlexandreLJr">Alexandre Xavier</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>27/05/25</td>
+        <td>30/05/25</td>
+        <td>30/05/25</td>
       </tr>
       <tr>
         <td>3.3.2. Observer</td>
