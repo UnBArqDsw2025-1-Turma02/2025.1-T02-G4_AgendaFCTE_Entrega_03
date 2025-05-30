@@ -47,9 +47,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <br>
         </td>
         <td><a href="https://github.com/thaleseuflauzino">Thales Euflauzino</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>22/05/25</td>
+        <td>23/05/25</td>
+        <td>23/05/25</td>
       </tr>
       <tr>
         <td>3.1.3. Singleton</td>
@@ -110,8 +110,8 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/pLopess">Pedro Lopes</a>
         </td>
         <td><a href="https://github.com/joaolucas102">João Lucas</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>26/05/25</td>
+        <td>30/05/25</td>
         <td>XX/XX/XX</td>
       </tr>
       <tr>
