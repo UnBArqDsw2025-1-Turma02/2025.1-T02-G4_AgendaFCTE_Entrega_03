@@ -203,7 +203,7 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
         <td><a href="https://github.com/moonshinerd/">Víctor Schmidt</a></td>
         <td>29/05/25</td>
         <td>30/05/2025</td>
-        <td>XX/XX/XX</td>
+        <td>30/05/2025</td>
       </tr>
       <tr>
         <td colspan="6"><center><strong>3.4. Participações - Padrões de Projeto</strong></center></td>
