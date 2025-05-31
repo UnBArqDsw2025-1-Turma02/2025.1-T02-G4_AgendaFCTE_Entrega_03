@@ -71,7 +71,7 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td><a href="https://github.com/rayenealmeida">Rayene Almeida</a></td>
-        <td>XX/XX/XX</td>
+        <td>30/05/25</td>
         <td>XX/XX/XX</td>
         <td>XX/XX/XX</td>
       </tr>
