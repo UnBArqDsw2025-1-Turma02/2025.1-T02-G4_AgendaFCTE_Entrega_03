@@ -10,6 +10,7 @@
       - [3.1.2. Builder](./PadroesDeProjeto/gofsCriacionais/Builder/3.1.2.Builder.md)
         - [3.1.2.1.Código PUML](./PadroesDeProjeto/gofsCriacionais/Builder/builder-puml.md)
       - [3.1.3. Singleton](./PadroesDeProjeto/gofsCriacionais/Singleton/3.1.3.Singleton.md)
+      - [3.1.4. Factory Method](./PadroesDeProjeto/gofsCriacionais/FactoryMethod/3.1.4.FactoryMethod.md)
       - [3.1.5. Prototype](./PadroesDeProjeto/gofsCriacionais/Prototype/3.1.5.Prototype.md)
     - [3.2. Padrões de Projeto GoFs Estruturais](./PadroesDeProjeto/gofsEstruturais/3.2.GoFsEstruturais.md)
       - [3.2.1. Bridge](./PadroesDeProjeto/gofsEstruturais/Bridge/3.2.1.Bridge.md)
