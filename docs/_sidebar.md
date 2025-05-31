@@ -20,6 +20,7 @@
       - [3.3.1. Command](./PadroesDeProjeto/gofsComportamentais/Command/3.3.1.Command.md)
         - [3.3.1.1.Código PUML](./PadroesDeProjeto/gofsComportamentais/Command/command-puml.md)
       - [3.3.2. Observer](./PadroesDeProjeto/gofsComportamentais/Observer/3.3.2.Observer.md)
+      - [3.3.3. State](./PadroesDeProjeto/gofsComportamentais/State/3.3.3.State.md)
       - [3.3.4. Iterator](./PadroesDeProjeto/gofsComportamentais/Iterator/3.3.4.Iterator.md)
     - [3.4. Participações - Padrões de Projeto](./PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](./PadroesDeProjeto/iniciativasExtras/3.5.IniciativasExtras.md)
