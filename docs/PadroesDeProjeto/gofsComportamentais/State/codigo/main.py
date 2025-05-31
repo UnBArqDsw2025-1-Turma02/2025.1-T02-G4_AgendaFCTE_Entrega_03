@@ -1,10 +1,3 @@
-# State
-
-## Introdução
-
-## Código
-
-```Python
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Dict
@@ -15,7 +8,7 @@ import uvicorn
 
 app = FastAPI(title="Agenda FCTE - API de Eventos")
 
-# --- State ---
+# --- State Design Pattern ---
 
 class EventoState(ABC):
     @abstractmethod
@@ -216,7 +209,3 @@ def cancelar_evento(nome: str):
 # --- Rodar a API ---
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
-
-```
-### Exemplos
-
