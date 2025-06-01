@@ -1,7 +1,184 @@
 ﻿# Modelagem do Banco de Dados
 
+
+## Modelagem Conceitual
+A modelagem conceitual é a primeira etapa do processo. Nela, busca-se representar os requisitos do negócio de forma abstrata, sem se preocupar com aspectos técnicos ou específicos de um SGBD (Sistema Gerenciador de Banco de Dados).
+A principal ferramenta utilizada é o modelo entidade-relacionamento (MER), que descreve:
+- Entidades: os objetos principais do sistema;
+- Atributos: as informações que caracterizam as entidades;
+- Relacionamentos: as interações entre as entidades;
+- Cardinalidade: expressa a quantidade mínima e máxima de vezes que uma entidade pode participar de um relacionamento com outra
+O foco da modelagem conceitual é compreender e organizar o domínio do problema, promovendo um entendimento claro entre os envolvidos no projeto (desenvolvedores, analistas, clientes etc.).
+
+### Elementos da Modelagem
+
+#### Entidades
+A modelagem conceitual da AgendaFCTE contempla as seguintes entidades principais:
+
+- Usuário: Representa os participantes do sistema, podendo ser organizadores ou apenas inscritos em eventos. Possui atributos como nome, email, senha, data_cadastro, entre outros.
+- Evento: Representa os eventos organizados e gerenciados na plataforma. Inclui informações como data, hora, descrição, limite de vagas, link de inscrição, entre outros.
+- Notificação: Guarda mensagens que são enviadas aos usuários. Inclui título e mensagem, sendo associada à entidade usuário.
+- Categoria: Classifica os eventos em diferentes grupos temáticos (como oficinas, palestras, cursos etc.).
+- Tag: Palavras-chave associadas aos eventos, permitindo melhor indexação e busca.
+- Mídia do Evento: Representa arquivos multimídia (imagens, vídeos) relacionados aos eventos. Contém atributos como tipo, URL do arquivo e descrição.
+- Seguir: Entidade responsável por representar o relacionamento de usuários com eventos ou organizadores que desejam acompanhar.
+
+#### Relacionamentos
+A modelagem inclui relacionamentos importantes que permitem capturar as interações entre os usuários e os eventos, conforme descrito a seguir:
+
+- Organiza: Relacionamento entre usuário (organizador) e evento, com atributo data_criacao.
+- Inscreve: Representa a inscrição de usuários em eventos. Inclui atributos como data_inscricao, status (confirmado, pendente etc.) e codigo da inscrição.
+- Comenta: Usuários podem comentar nos eventos, sendo registrada a mensagem e data_postagem.
+- Gera: Relacionamento entre evento e certificado, com os atributos data_emissao e url_pdf.
+- Avalia: Usuários podem avaliar os eventos, registrando uma nota e um comentário.
+- Favorita: Indica os eventos marcados como favoritos pelos usuários.
+- Possui: O evento pode estar associado a uma ou mais categorias, tags e mídias. Há múltiplas instâncias deste relacionamento na modelagem.
+- Recebe: Representa as notificações recebidas por usuários.
+- Rel: Generalização que permite especializar o relacionamento de “seguir” em seguir_evento e seguir_organizador.
+
+## Modelagem Lógica
+A modelagem lógica do banco de dados visa representar, em um nível mais técnico, as entidades, atributos e relacionamentos definidos na etapa conceitual, de forma que possa ser posteriormente convertida em um modelo físico implementável em um SGBD relacional.
+
+1. **Entidade usuario**:
+
+A tabela usuario armazena os dados dos participantes e organizadores da plataforma. Cada usuário possui:
+
+- pkusuario: chave primária (identificador único);
+- nome, email, senha: dados de login e identificação;
+- foto_perfil: imagem de perfil;
+- data_cadastro: data de criação do usuário no sistema;
+- organizador: atributo booleano que define se o usuário é organizador de eventos.
+
+A entidade se relaciona com diversas outras entidades, como evento, inscricao_evento, avaliacao, entre outras.
+
+2. **Entidade evento:**
+
+Representa os eventos cadastrados na plataforma. Seus principais atributos incluem:
+
+- pkevento: chave primária;
+- dataevento, horaevento, localevento, descricaoevento, contato: detalhamento do evento;
+- link_inscricao: URL para inscrição;
+- possui_certificado: booleano que indica se o evento oferece certificado;
+- limite_vagas: número máximo de participantes;
+- fkcategoria: chave estrangeira para a entidade categoria.
+
+A tabela evento possui relacionamentos com várias tabelas associativas que representam interações de usuários com eventos.
+
+3. **Entidade categoria:**
+
+Contém as categorias que classificam os eventos:
+
+- pkcategoria: chave primária;
+- categoria: descrição textual da categoria.
+
+Cada evento pertence a uma única categoria.
+
+4. **Entidade midia_evento:**
+
+Armazena arquivos de mídia (imagens, vídeos) relacionados aos eventos:
+
+- pkmidia: chave primária;
+- fkevento: chave estrangeira para evento;
+- tipo, url_arquivo, descricao: informações sobre a mídia.
+
+5. **Entidade tag e rel_evento_tag:**
+
+A entidade tag representa palavras-chave associáveis aos eventos. Como a relação entre eventos e tags é do tipo muitos-para-muitos, utiliza-se a tabela intermediária rel_evento_tag, que contém:
+
+- fkevento e fktag: chaves estrangeiras que formam uma chave composta.
+
+6. **Entidade rel_seguir_evento:**
+
+Tabela associativa que registra os usuários que seguem eventos específicos:
+
+- fkusuario e fkevento: chaves estrangeiras (compõem a chave primária).
+
+7. **Entidade rel_seguir_organizador:**
+
+Registra os usuários que seguem organizadores:
+
+- pksesguir_organizador: chave primária;
+- fkusuario e fkorganizador: chaves estrangeiras.
+
+8. **Entidade rel_organizador_evento:**
+
+Relaciona organizadores com os eventos criados por eles:
+
+- fkorganizador, fkevento: chaves estrangeiras (compõem a chave primária);
+- data_criacao: data de criação do evento.
+
+9. **Entidade rel_inscricao_evento:**
+
+Controla as inscrições dos usuários nos eventos:
+
+- fkusuario, fkevento: chaves estrangeiras (compõem a chave primária);
+- data_inscricao, status, codigo_inscricao: dados da inscrição.
+
+10. **Entidade rel_avaliacao:**
+
+Registra avaliações de usuários sobre eventos:
+
+- fkusuario, fkevento: chaves estrangeiras (compõem a chave primária);
+- avaliacao: nota;
+- comentario: observação textual.
+
+11. **Entidade rel_favoritado:**
+
+Controla quais eventos foram favoritados pelos usuários:
+
+- fkusuario, fkevento: chaves estrangeiras (compõem a chave primária);
+- favoritado: valor booleano.
+
+12. **Entidade rel_forum_evento:**
+
+Armazena mensagens de fórum (comentários) associadas a eventos:
+
+- fkevento, fkusuario: chaves estrangeiras (compõem a chave primária);
+- mensagem, data_postagem: conteúdo e data da mensagem.
+
+13. **Entidade rel_certificado:**
+
+Relaciona o usuário a certificados emitidos por participação:
+
+- fkevento, fkusuario: chaves estrangeiras (compõem a chave primária);
+- data_emissao, url_pdf: informações do certificado.
+
+14. **Entidades notificacao e rel_notificacao_usuario:**
+
+- notificacao: define o conteúdo da notificação, com pknotificacao, titulo e mensagem.
+- notificacao_usuario: associa a notificação a um usuário, contendo:
+- fkusuario, fknotificacao: chaves estrangeiras;
+- data_envio, lida: data e status da leitura.
+
+## Modelagem Física
+A modelagem física é a etapa final do processo de modelagem de dados, responsável por traduzir o modelo lógico para uma estrutura concreta que será implementada no Sistema Gerenciador de Banco de Dados (SGBD) escolhido. Nessa fase, são definidos os nomes das tabelas e colunas, os tipos de dados específicos, os índices, chaves primárias e estrangeiras, além de outras restrições de integridade que garantem o correto funcionamento e desempenho do banco de dados.
+
+Cada entidade lógica do modelo anterior foi convertida em uma tabela física com os respectivos atributos e relacionamentos. As tabelas foram criadas com nomes simples e descritivos, respeitando a convenção de nomes claros e sem ambiguidade.
+
+Componentes:
+
+- **Chaves Primárias (PK)** foram atribuídas a todos os registros como identificadores únicos, geralmente com nomes como pkusuario, pkevento, pkcategoria, etc.
+- **Chaves Estrangeiras (FK)** foram utilizadas para representar relacionamentos entre entidades, garantindo a integridade referencial entre os dados. Por exemplo, fkusuario e fkevento são largamente utilizadas nas tabelas relacionais para vincular registros de usuario e evento.
+- Os tipos de dados foram atribuídos de acordo com a natureza de cada atributo:
+  - Campos como nome, email, titulo, mensagem usam VARCHAR com limites definidos.
+  - Datas como data_evento, data_cadastro, data_postagem utilizam o tipo DATE.
+  - Atributos booleanos como organizador, favoritado, possui_certificado, lida usam o tipo BOOLEAN.
+  - Identificadores primários geralmente utilizam INT com AUTO_INCREMENT para facilitar a geração automática de chaves únicas.
+- Restrições de integridade referencial com ON DELETE CASCADE ou ON DELETE SET NULL, conforme aplicável, para manter a consistência dos dados ao excluir registros relacionados.
+- Restrições de integridade de domínio, como NOT NULL, limites de caracteres e validações de tipo também foram aplicadas.
+
+## Bibliografia
+> <a id='ref1' style="text-decoration: none; color: inherit;"> UNIVERSIDADE DE BRASÍLIA. Modelo Conceitual – Parte 1. Disponível em: https://aprender3.unb.br/pluginfile.php/3114408/mod_resource/content/2/aula_modelo_conceitual_parte1.pdf. Acesso em: 31 maio 2025.</a>
+>
+> <a id='ref2' style="text-decoration: none; color: inherit;"> UNIVERSIDADE DE BRASÍLIA. Cardinalidade. Disponível em: https://aprender3.unb.br/pluginfile.php/3114413/mod_resource/content/2/cardinalidade.pdf. Acesso em: 31 maio 2025.</a>
+>
+> <a id='ref3' style="text-decoration: none; color: inherit;"> UNIVERSIDADE DE BRASÍLIA. Mapeamento para Tabelas Relacionais. Disponível em: https://aprender3.unb.br/pluginfile.php/3114422/mod_resource/content/5/mapeamento_tabela.pdf. Acesso em: 31 maio 2025.</a>
+>
+> <a id='ref4' style="text-decoration: none; color: inherit;"> UNIVERSIDADE DE BRASÍLIA. Linguagem SQL – Parte 1. Disponível em: https://aprender3.unb.br/pluginfile.php/3114427/mod_resource/content/2/Linguagem%20SQL%20-%20parte%201.pdf. Acesso em: 31 maio 2025.</a>
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor | Revisor | Comentário do Revisor |
 | -- | -- | -- | -- | -- | -- |
 | `1.0`  | 31/05/2025 | Adição do código sql | [Manoela Garcia](https://github.com/manu-sgc) |  | |
+| `1.1`  | 31/05/2025 | Adição dos textos explicando as modelagens | [Manoela Garcia](https://github.com/manu-sgc) |  | |
