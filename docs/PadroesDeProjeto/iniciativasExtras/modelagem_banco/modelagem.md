@@ -398,7 +398,7 @@ $$ language 'plpgsql' stable;
 
 | Versão | Data | Descrição | Autor | Revisor | Comentário do Revisor |
 | -- | -- | -- | -- | -- | -- |
-| `1.0`  | 31/05/2025 | Adição do código sql | [Manoela Garcia](https://github.com/manu-sgc) |  | |
-| `1.1`  | 31/05/2025 | Adição dos textos explicando as modelagens | [Manoela Garcia](https://github.com/manu-sgc) |  | |
-| `1.2`  | 01/06/2025 | Adição dos textos introdutórios | [Victor Bernardes](https://github.com/VHbernardes) |  | |
-| `1.3`  | 01/06/2025 | Adição das modelagens visuais e código SQL | [Victor Bernardes](https://github.com/VHbernardes) |  | |
+| `1.0`  | 31/05/2025 | Adição do código sql | [Manoela Garcia](https://github.com/manu-sgc) | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Parabéns pelo trabalho! |
+| `1.1`  | 31/05/2025 | Adição dos textos explicando as modelagens | [Manoela Garcia](https://github.com/manu-sgc) | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Parabéns pelo trabalho! |
+| `1.2`  | 01/06/2025 | Adição dos textos introdutórios | [Victor Bernardes](https://github.com/VHbernardes) | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Parabéns pelo trabalho! |
+| `1.3`  | 01/06/2025 | Adição das modelagens visuais e código SQL | [Victor Bernardes](https://github.com/VHbernardes) | [Thales Euflauzino](https://github.com/thaleseuflauzino) | Parabéns pelo trabalho! |
