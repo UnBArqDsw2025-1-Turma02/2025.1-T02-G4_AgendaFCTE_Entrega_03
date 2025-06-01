@@ -1,0 +1,121 @@
+﻿@startuml Command
+title Padrão Command aplicado ao AgendaFCTE - Ações sobre Evento
+
+' Interface do Command
+interface Comando {
+    +executar(): void
+}
+
+' ConcreteCommands
+class ConfirmarPresencaCommand {
+    -usuario: Usuario
+    -evento: Evento
+    +ConfirmarPresencaCommand(usuario: Usuario, evento: Evento)
+    +executar(): void
+}
+
+class CurtirEventoCommand {
+    -usuario: Usuario
+    -evento: Evento
+    +CurtirEventoCommand(usuario: Usuario, evento: Evento)
+    +executar(): void
+}
+
+class FavoritarEventoCommand {
+    -usuario: Usuario
+    -evento: Evento
+    +FavoritarEventoCommand(usuario: Usuario, evento: Evento)
+    +executar(): void
+}
+
+class DesinteresseEventoCommand {
+    -usuario: Usuario
+    -evento: Evento
+    +DesinteresseEventoCommand(usuario: Usuario, evento: Evento)
+    +executar(): void
+}
+
+class RequisitarParticipacaoCommand {
+    -usuario: Usuario
+    -evento: Evento
+    +RequisitarParticipacaoCommand(usuario: Usuario, evento: Evento)
+    +executar(): void
+}
+
+class ComentarEventoCommand {
+    -usuario: Usuario
+    -evento: Evento
+    +ComentarEventoCommand(usuario: Usuario, evento: Evento)
+    +executar(): void
+}
+
+class DenunciarEventoCommand {
+    -usuario: Usuario
+    -evento: Evento
+    +DenunciarEventoCommand(usuario: Usuario, evento: Evento)
+    +executar(): void
+}
+
+' Receiver
+class Evento {
+    +confirmarPresenca(usuario: Usuario): void
+    +curtir(usuario: Usuario): void
+    +favoritar(usuario: Usuario): void
+    +indicarDesinteresse(usuario: Usuario): void
+    +requisitarParticipacao(usuario: Usuario): void
+    +comentarEvento(usuario: Usuario): void
+    +denunciarEvento(usuario: Usuario): void
+}
+
+' Invoker
+class GerenciadorDeComandos {
+    -fila: List<Command>
+    +setCommand(c: Command): void
+    +executarComandos(): void
+}
+
+' Cliente
+class Aplicacao
+
+' Associações
+Comando <|.. ConfirmarPresencaCommand
+Comando <|.. CurtirEventoCommand
+Comando <|.. FavoritarEventoCommand
+Comando <|.. DesinteresseEventoCommand
+Comando <|.. RequisitarParticipacaoCommand
+Comando <|.. ComentarEventoCommand
+Comando <|.. DenunciarEventoCommand
+
+ConfirmarPresencaCommand --> Evento
+ConfirmarPresencaCommand --> Usuario
+
+CurtirEventoCommand --> Evento
+CurtirEventoCommand --> Usuario
+
+FavoritarEventoCommand --> Evento
+FavoritarEventoCommand --> Usuario
+
+DesinteresseEventoCommand --> Evento
+DesinteresseEventoCommand --> Usuario
+
+RequisitarParticipacaoCommand --> Evento
+RequisitarParticipacaoCommand --> Usuario
+
+ComentarEventoCommand --> Evento
+ComentarEventoCommand --> Usuario
+
+DenunciarEventoCommand --> Evento
+DenunciarEventoCommand --> Usuario
+
+GerenciadorDeComandos --> Comando
+Aplicacao --> GerenciadorDeComandos
+Aplicacao --> Evento
+Aplicacao --> Usuario
+
+' Objetos auxiliares
+class Usuario {
+    -nome: String
+    +Usuario(nome: String)
+}
+
+@enduml
