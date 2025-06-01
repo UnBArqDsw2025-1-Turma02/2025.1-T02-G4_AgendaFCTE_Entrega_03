@@ -26,6 +26,7 @@
       - [3.5.1. Cronograma](./PadroesDeProjeto/iniciativasExtras/cronograma/cronograma.md)
         - [3.5.1.1. Cronograma Planejado](./PadroesDeProjeto/iniciativasExtras/cronograma/cronogramaPlanejado.md)
         - [3.5.1.2. Cronograma Executado](./PadroesDeProjeto/iniciativasExtras/cronograma/cronogramaExecutado.md)
+      - [3.5.2. Modelagem do Banco de Dados](./PadroesDeProjeto/iniciativasExtras/modelagem_banco/modelagem.md)
 
 - **Atas**
   - [Ata modelo](./Atas/AtaModelo.md)
