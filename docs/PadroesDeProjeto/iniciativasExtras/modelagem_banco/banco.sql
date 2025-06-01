@@ -1,162 +1,180 @@
-﻿CREATE TABLE usuario 
-( 
- pkusuario INT PRIMARY KEY,  
- nome CHAR(n) NOT NULL,  
- email CHAR(n) NOT NULL,  
- senha CHAR(n) NOT NULL,  
- foto_perfil CHAR(n),  
- data_cadastro DATE NOT NULL,  
- organizador: BOOL CHAR(n) DEFAULT 'false',  
- UNIQUE (nome,email)
-); 
+﻿create table usuario (
+    pkusuario serial primary key,
+    nome varchar(100) not null,
+    email varchar(100) not null,
+    senha varchar(100) not null,
+    foto_perfil varchar(255),
+    data_cadastro date not null,
+    organizador boolean default false,
+    unique (nome)
+);
 
-CREATE TABLE evento 
-( 
- pkevento INT PRIMARY KEY AUTO_INCREMENT,  
- dataevento DATE NOT NULL,  
- horaevento DATE NOT NULL,  
- localevento CHAR(n) NOT NULL,  
- descricaoevento CHAR(n) NOT NULL,  
- contato CHAR(n),  
- link_inscricao CHAR(n) NOT NULL,  
- possui_certificado: BOOL VARCHAR(n) NOT NULL DEFAULT 'False',  
- fkcategoria INT NOT NULL,  
- limite_vagas INT,  
-); 
+create table categoria (
+    pkcategoria serial primary key,
+    categoria varchar(100) not null,
+    unique (categoria)
+);
 
-CREATE TABLE categoria 
-( 
- pkcategoria INT PRIMARY KEY AUTO_INCREMENT,  
- categoria CHAR(n) NOT NULL,  
- UNIQUE (categoria)
-); 
+create table evento (
+    pkevento serial primary key,
+    dataevento date not null,
+    horaevento time not null,
+    localevento varchar(150) not null,
+    descricaoevento varchar(500) not null,
+    contato varchar(100),
+    link_inscricao varchar(200),
+    possui_certificado boolean not null,
+    fkcategoria int not null,
+    limite_vagas int,
+    foreign key (fkcategoria) references categoria(pkcategoria)
+);
 
-CREATE TABLE tag 
-( 
- pktag INT PRIMARY KEY AUTO_INCREMENT,  
- tag CHAR(n) NOT NULL,  
- UNIQUE (tag)
-); 
+create table tag (
+    pktag serial primary key,
+    tag varchar(100) not null,
+    unique (tag)
+);
 
-CREATE TABLE rel_evento_tag 
-( 
- fkevento INT PRIMARY KEY,  
- fktag INT PRIMARY KEY,  
-); 
+create table rel_evento_tag (
+    fkevento int,
+    fktag int,
+    primary key (fkevento, fktag),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fktag) references tag(pktag)
+);
 
-CREATE TABLE avaliacao 
-( 
- avaliacao CHAR(n) NOT NULL,  
- fkevento INT PRIMARY KEY,  
- fkusuario INT PRIMARY KEY NOT NULL,  
- comentario CHAR(n),  
-); 
+create table avaliacao (
+    fkevento int,
+    fkusuario int,
+    avaliacao int not null,
+    comentario varchar(300),
+    primary key (fkevento, fkusuario),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fkusuario) references usuario(pkusuario)
+);
 
-CREATE TABLE favoritado 
-( 
- fkusuario INT PRIMARY KEY NOT NULL,  
- fkevento INT PRIMARY KEY NOT NULL,  
- favoritado: BOOL INT DEFAULT 'true',  
-); 
+create table favoritado (
+    fkusuario int,
+    fkevento int,
+    favoritado boolean,
+    primary key (fkusuario, fkevento),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
 
-CREATE TABLE organizador_evento 
-( 
- fkorganizador INT PRIMARY KEY NOT NULL,  
- fkevento INT PRIMARY KEY NOT NULL,  
- data_criacao DATE NOT NULL,  
-); 
+create table organizador_evento (
+    fkorganizador int,
+    fkevento int,
+    data_criacao date not null,
+    primary key (fkorganizador, fkevento),
+    foreign key (fkorganizador) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
 
-CREATE TABLE notificacao_usuario 
-( 
- fkusuario INT NOT NULL,  
- fknotificacao INT NOT NULL,  
- data_envio DATE NOT NULL,  
- lida: BOOL INT DEFAULT 'false',  
-); 
+create table notificacao (
+    pknotificacao serial primary key,
+    titulo varchar(100) not null,
+    mensagem varchar(500) not null
+);
 
-CREATE TABLE notificacao 
-( 
- pknotificacao INT PRIMARY KEY AUTO_INCREMENT,  
- titulo CHAR(n) NOT NULL,  
- mensagem CHAR(n) NOT NULL,  
-); 
+create table notificacao_usuario (
+    fkusuario int,
+    fknotificacao int,
+    data_envio date not null,
+    lida boolean default false,
+    primary key (fkusuario, fknotificacao),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fknotificacao) references notificacao(pknotificacao)
+);
 
-CREATE TABLE sugestao_evento 
-( 
- fkusuario INT PRIMARY KEY,  
- fkevento INT PRIMARY KEY,  
-); 
+create table inscricao_evento (
+    fkusuario int,
+    fkevento int,
+    data_inscricao date not null,
+    status varchar(1), -- C - confirmado, E - em andamento, A - anulado
+    codigo_inscricao int not null unique,
+    primary key (fkusuario, fkevento),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
 
-CREATE TABLE inscricao_evento 
-( 
- fkusuario INT PRIMARY KEY NOT NULL,  
- fkevento INT PRIMARY KEY NOT NULL,  
- data_inscricao DATE NOT NULL,  
- status VARCHAR(n) DEFAULT 'C',  
- codigo_inscricao INT NOT NULL,  
- UNIQUE (codigo_inscricao)
-); 
+create table certificado (
+    fkevento int,
+    fkusuario int,
+    data_emissao date not null,
+    url_pdf varchar(255) not null,
+    primary key (fkevento, fkusuario),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fkusuario) references usuario(pkusuario)
+);
 
-CREATE TABLE certificado 
-( 
- fkevento INT PRIMARY KEY NOT NULL,  
- fkusuario INT PRIMARY KEY NOT NULL,  
- data_emissao DATE NOT NULL,  
- url_pdf CHAR(n) NOT NULL,  
-); 
+create table forum_evento (
+    fkevento int,
+    fkusuario int,
+    mensagem varchar(500) not null,
+    data_postagem date not null,
+    primary key (fkevento, fkusuario),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fkusuario) references usuario(pkusuario)
+);
 
-CREATE TABLE forum_evento 
-( 
- fkevento INT PRIMARY KEY NOT NULL,  
- fkusuario INT PRIMARY KEY NOT NULL,  
- mensagem CHAR(n) NOT NULL,  
- data_postagem DATE NOT NULL,  
-); 
+create table midia_evento (
+    pkmidia serial primary key,
+    fkevento int not null,
+    tipo varchar(1) not null, -- I - imagem / V - vídeo
+    url_arquivo varchar(255) not null,
+    descricao varchar(255),
+    foreign key (fkevento) references evento(pkevento)
+);
 
-CREATE TABLE midia_evento 
-( 
- pkmidia INT PRIMARY KEY AUTO_INCREMENT,  
- fkevento INT NOT NULL,  
- tipo VARCHAR(n) NOT NULL,  
- url_arquivo CHAR(n) NOT NULL,  
- descricao CHAR(n),  
-); 
+create table rel_seguir_evento (
+    fkusuario int,
+    fkevento int,
+    primary key (fkusuario, fkevento),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
 
-CREATE TABLE rel_seguir_evento 
-( 
- fkusuario INT PRIMARY KEY NOT NULL,  
- fkevento INT PRIMARY KEY NOT NULL,  
-); 
+create table seguir_organizador (
+    pkseguir_organizador serial primary key,
+    fkusuario int not null,
+    fkorganizador int not null,
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkorganizador) references usuario(pkusuario)
+);
 
-CREATE TABLE seguir_organizador 
-( 
- pkseguir_organizador INT PRIMARY KEY AUTO_INCREMENT,  
- fkusuario INT NOT NULL,  
- fkorganizador INT NOT NULL,  
-); 
+create trigger trigger_inscricao_evento_status
+before insert or update on inscricao_evento
+for each row
+execute function inscricao_evento_tratamento();
 
-ALTER TABLE evento ADD FOREIGN KEY(pkevento) REFERENCES undefined (pkevento)
-ALTER TABLE evento ADD FOREIGN KEY(fkcategoria) REFERENCES categoria (fkcategoria)
-ALTER TABLE rel_evento_tag ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE rel_evento_tag ADD FOREIGN KEY(fktag) REFERENCES tag (fktag)
-ALTER TABLE avaliacao ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE avaliacao ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE favoritado ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE favoritado ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE organizador_evento ADD FOREIGN KEY(fkorganizador) REFERENCES usuario (fkorganizador)
-ALTER TABLE organizador_evento ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE notificacao_usuario ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE notificacao_usuario ADD FOREIGN KEY(fknotificacao) REFERENCES notificacao (fknotificacao)
-ALTER TABLE sugestao_evento ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE sugestao_evento ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE inscricao_evento ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE inscricao_evento ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE certificado ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE certificado ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE forum_evento ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE forum_evento ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE midia_evento ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE rel_seguir_evento ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE rel_seguir_evento ADD FOREIGN KEY(fkevento) REFERENCES evento (fkevento)
-ALTER TABLE seguir_organizador ADD FOREIGN KEY(fkusuario) REFERENCES usuario (fkusuario)
-ALTER TABLE seguir_organizador ADD FOREIGN KEY(fkorganizador) REFERENCES usuario (fkorganizador)
+create or replace function inscricao_evento_tratamento() returns trigger as
+$$
+begin
+-- status
+  if length(coalesce(new.status, '')) > 0 then
+    if new.status not in ('C', 'E', 'A') then
+      raise exception 'Status inválido: % (use apenas C, E ou A)', new.status;
+    end if;
+  end if;
+  return new;
+end;
+$$ language 'plpgsql' stable;
+
+create trigger trigger_midia_evento_tipo
+before insert or update on midia_evento
+for each row
+execute function midia_evento_tratamento();
+
+create or replace function midia_evento_tratamento() returns trigger as
+$$
+begin
+-- tipo
+  if length(coalesce(new.tipo, '')) > 0 then
+    if new.tipo not in ('I', 'V') then
+      raise exception 'Tipo inválido: % (use apenas I ou V)', new.tipo;
+    end if;
+  end if;
+  return new;
+end;
+$$ language 'plpgsql' stable;
