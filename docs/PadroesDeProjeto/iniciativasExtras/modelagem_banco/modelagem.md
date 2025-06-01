@@ -1,5 +1,11 @@
 ﻿# Modelagem do Banco de Dados
 
+## Introdução
+O desenvolvimento de um sistema de banco de dados envolve diferentes etapas de modelagem que visam representar os dados e suas relações de maneira progressivamente mais detalhada. As três principais fases são: modelagem conceitual, modelagem lógica e modelagem física. Cada uma possui um papel fundamental na construção de uma base de dados eficiente, bem estruturada e aderente aos requisitos do sistema.
+
+## Metodologia
+A modelagem do sistema AgendaFCTE foi elaborada com base nos requisitos funcionais e não funcionais identificados na [Entrega 1](https://unbarqdsw2025-1-turma02.github.io/2025.1-T02-_G4_AgendaFCTE_Entrega_01/#/./Base/1.5.3.PriorizacaoMosCoW). As modelagens conceitual e lógica foram feitas pelo [BR Modelo Web](https://www.brmodeloweb.com/), um site feito para a construção desses modelos. 
+A seguir, segue cada um dos três modelos (conceitual, lógica e física) com suas respectivas explicações.
 
 ## Modelagem Conceitual
 A modelagem conceitual é a primeira etapa do processo. Nela, busca-se representar os requisitos do negócio de forma abstrata, sem se preocupar com aspectos técnicos ou específicos de um SGBD (Sistema Gerenciador de Banco de Dados).
@@ -35,6 +41,16 @@ A modelagem inclui relacionamentos importantes que permitem capturar as interaç
 - Possui: O evento pode estar associado a uma ou mais categorias, tags e mídias. Há múltiplas instâncias deste relacionamento na modelagem.
 - Recebe: Representa as notificações recebidas por usuários.
 - Rel: Generalização que permite especializar o relacionamento de “seguir” em seguir_evento e seguir_organizador.
+
+#### Modelagem
+
+<iframe 
+    frameborder="0" 
+    style="width:100%;height:453px;" 
+    src="https://app.brmodeloweb.com/#!/publicview/683bac6c4ae4596e44f5fcc5" 
+    allowtransparency="true">
+</iframe>
+
 
 ## Modelagem Lógica
 A modelagem lógica do banco de dados visa representar, em um nível mais técnico, as entidades, atributos e relacionamentos definidos na etapa conceitual, de forma que possa ser posteriormente convertida em um modelo físico implementável em um SGBD relacional.
@@ -150,6 +166,15 @@ Relaciona o usuário a certificados emitidos por participação:
 - fkusuario, fknotificacao: chaves estrangeiras;
 - data_envio, lida: data e status da leitura.
 
+#### Modelagem
+
+<iframe 
+    frameborder="0" 
+    style="width:100%;height:453px;" 
+    src="https://app.brmodeloweb.com/#!/publicview/683baed44ae4596e44f5fd07" 
+    allowtransparency="true">
+</iframe>
+
 ## Modelagem Física
 A modelagem física é a etapa final do processo de modelagem de dados, responsável por traduzir o modelo lógico para uma estrutura concreta que será implementada no Sistema Gerenciador de Banco de Dados (SGBD) escolhido. Nessa fase, são definidos os nomes das tabelas e colunas, os tipos de dados específicos, os índices, chaves primárias e estrangeiras, além de outras restrições de integridade que garantem o correto funcionamento e desempenho do banco de dados.
 
@@ -164,8 +189,195 @@ Componentes:
   - Datas como data_evento, data_cadastro, data_postagem utilizam o tipo DATE.
   - Atributos booleanos como organizador, favoritado, possui_certificado, lida usam o tipo BOOLEAN.
   - Identificadores primários geralmente utilizam INT com AUTO_INCREMENT para facilitar a geração automática de chaves únicas.
-- Restrições de integridade referencial com ON DELETE CASCADE ou ON DELETE SET NULL, conforme aplicável, para manter a consistência dos dados ao excluir registros relacionados.
-- Restrições de integridade de domínio, como NOT NULL, limites de caracteres e validações de tipo também foram aplicadas.
+
+
+#### Código SQL
+
+É possível também verificar o código seguindo essa estrutura dentro do repositório no caminho `docs/PadroesDeProjeto/iniciativasExtras/modelagem_banco/banco.sql`.
+
+```SQL
+create table usuario (
+    pkusuario serial primary key,
+    nome varchar(100) not null,
+    email varchar(100) not null,
+    senha varchar(100) not null,
+    foto_perfil varchar(255),
+    data_cadastro date not null,
+    organizador boolean default false,
+    unique (nome)
+);
+
+create table categoria (
+    pkcategoria serial primary key,
+    categoria varchar(100) not null,
+    unique (categoria)
+);
+
+create table evento (
+    pkevento serial primary key,
+    dataevento date not null,
+    horaevento time not null,
+    localevento varchar(150) not null,
+    descricaoevento varchar(500) not null,
+    contato varchar(100),
+    link_inscricao varchar(200),
+    possui_certificado boolean not null,
+    fkcategoria int not null,
+    limite_vagas int,
+    foreign key (fkcategoria) references categoria(pkcategoria)
+);
+
+create table tag (
+    pktag serial primary key,
+    tag varchar(100) not null,
+    unique (tag)
+);
+
+create table rel_evento_tag (
+    fkevento int,
+    fktag int,
+    primary key (fkevento, fktag),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fktag) references tag(pktag)
+);
+
+create table avaliacao (
+    fkevento int,
+    fkusuario int,
+    avaliacao int not null,
+    comentario varchar(300),
+    primary key (fkevento, fkusuario),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fkusuario) references usuario(pkusuario)
+);
+
+create table favoritado (
+    fkusuario int,
+    fkevento int,
+    favoritado boolean,
+    primary key (fkusuario, fkevento),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
+
+create table organizador_evento (
+    fkorganizador int,
+    fkevento int,
+    data_criacao date not null,
+    primary key (fkorganizador, fkevento),
+    foreign key (fkorganizador) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
+
+create table notificacao (
+    pknotificacao serial primary key,
+    titulo varchar(100) not null,
+    mensagem varchar(500) not null
+);
+
+create table notificacao_usuario (
+    fkusuario int,
+    fknotificacao int,
+    data_envio date not null,
+    lida boolean default false,
+    primary key (fkusuario, fknotificacao),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fknotificacao) references notificacao(pknotificacao)
+);
+
+create table inscricao_evento (
+    fkusuario int,
+    fkevento int,
+    data_inscricao date not null,
+    status varchar(1), -- C - confirmado, E - em andamento, A - anulado
+    codigo_inscricao int not null unique,
+    primary key (fkusuario, fkevento),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
+
+create table certificado (
+    fkevento int,
+    fkusuario int,
+    data_emissao date not null,
+    url_pdf varchar(255) not null,
+    primary key (fkevento, fkusuario),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fkusuario) references usuario(pkusuario)
+);
+
+create table forum_evento (
+    fkevento int,
+    fkusuario int,
+    mensagem varchar(500) not null,
+    data_postagem date not null,
+    primary key (fkevento, fkusuario),
+    foreign key (fkevento) references evento(pkevento),
+    foreign key (fkusuario) references usuario(pkusuario)
+);
+
+create table midia_evento (
+    pkmidia serial primary key,
+    fkevento int not null,
+    tipo varchar(1) not null, -- I - imagem / V - vídeo
+    url_arquivo varchar(255) not null,
+    descricao varchar(255),
+    foreign key (fkevento) references evento(pkevento)
+);
+
+create table rel_seguir_evento (
+    fkusuario int,
+    fkevento int,
+    primary key (fkusuario, fkevento),
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkevento) references evento(pkevento)
+);
+
+create table seguir_organizador (
+    pkseguir_organizador serial primary key,
+    fkusuario int not null,
+    fkorganizador int not null,
+    foreign key (fkusuario) references usuario(pkusuario),
+    foreign key (fkorganizador) references usuario(pkusuario)
+);
+
+create trigger trigger_inscricao_evento_status
+before insert or update on inscricao_evento
+for each row
+execute function inscricao_evento_tratamento();
+
+create or replace function inscricao_evento_tratamento() returns trigger as
+$$
+begin
+-- status
+  if length(coalesce(new.status, '')) > 0 then
+    if new.status not in ('C', 'E', 'A') then
+      raise exception 'Status inválido: % (use apenas C, E ou A)', new.status;
+    end if;
+  end if;
+  return new;
+end;
+$$ language 'plpgsql' stable;
+
+create trigger trigger_midia_evento_tipo
+before insert or update on midia_evento
+for each row
+execute function midia_evento_tratamento();
+
+create or replace function midia_evento_tratamento() returns trigger as
+$$
+begin
+-- tipo
+  if length(coalesce(new.tipo, '')) > 0 then
+    if new.tipo not in ('I', 'V') then
+      raise exception 'Tipo inválido: % (use apenas I ou V)', new.tipo;
+    end if;
+  end if;
+  return new;
+end;
+$$ language 'plpgsql' stable;
+```
+
 
 ## Bibliografia
 > <a id='ref1' style="text-decoration: none; color: inherit;"> UNIVERSIDADE DE BRASÍLIA. Modelo Conceitual – Parte 1. Disponível em: https://aprender3.unb.br/pluginfile.php/3114408/mod_resource/content/2/aula_modelo_conceitual_parte1.pdf. Acesso em: 31 maio 2025.</a>
@@ -182,3 +394,5 @@ Componentes:
 | -- | -- | -- | -- | -- | -- |
 | `1.0`  | 31/05/2025 | Adição do código sql | [Manoela Garcia](https://github.com/manu-sgc) |  | |
 | `1.1`  | 31/05/2025 | Adição dos textos explicando as modelagens | [Manoela Garcia](https://github.com/manu-sgc) |  | |
+| `1.2`  | 01/06/2025 | Adição dos textos introdutórios | [Victor Bernardes](https://github.com/VHbernardes) |  | |
+| `1.3`  | 01/06/2025 | Adição das modelagens visuais e código SQL | [Victor Bernardes](https://github.com/VHbernardes) |  | |
