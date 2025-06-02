@@ -22,8 +22,22 @@
 ## Sobre 
 O AgendaFCTE é um web‑app que centraliza todos os eventos da FCTE em um só lugar, exibindo data, hora, local, descrição, link de inscrição e contato. Usuários autenticados (por e‑mail) podem filtrar a lista por tema, localização ou palavra‑chave, favoritar eventos, cadastrar novos eventos e gerenciar inscrições com controle de vagas, além de entrar em contato direto com os organizadores.
 
+
+## Screenshots da Terceira Entrega
+
+### Diagrama Factory Method
+![Diagrama Factory Method](assets/FactoryMethod/diagrama-factory.png)
+
+### Diagrama Bridge
+![Diagrama Bridge](assets/bridge/diagrama-bridge.jpg)
+
+### Diagrama Command
+![Diagrama Command](assets/Command/uml/diagrama-uml.png)
+
+
 #### Histórico de Versões
 
 | Versão | Data | Descrição | Autor | Revisor | Comentário do Revisor |
 | -- | -- | -- | -- | -- | -- |
-| `1.0` | 13/05/2025 | Criação do documento | [Thales Euflauzino](https://github.com/thaleseuflauzino) | | |
+| `1.0` | 13/05/2025 | Criação do documento | [Thales Euflauzino](https://github.com/thaleseuflauzino) | [Víctor Schmidt](https://github.com/moonshinerd) | Revisado! Tudo certo |
+| `1.1` | 01/06/2025 | Adicionando prints da entrega | [Víctor Schmidt](https://github.com/moonshinerd) | [Thales Euflauzino](https://github.com/thaleseuflauzino)  | Bom trabalho! |

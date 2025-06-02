@@ -1,8 +1,6 @@
 venv/
 
 __pycache__
-docs/assets/Facade/codigo/*.class
-docs/assets/Singleton/codigo/Agenda.class
-docs/assets/Singleton/codigo/Evento.class
-docs/assets/Singleton/codigo/Main.class
-docs/assets/Iterator/codigo/*.class
+docs/PadroesDeProjeto/gofsCriacionais/Singleton/codigo/*.class
+docs/PadroesDeProjeto/gofsEstruturais/Facade/codigo/*.class
+docs/PadroesDeProjeto/gofsComportamentais/Iterator/codigo/*.class
