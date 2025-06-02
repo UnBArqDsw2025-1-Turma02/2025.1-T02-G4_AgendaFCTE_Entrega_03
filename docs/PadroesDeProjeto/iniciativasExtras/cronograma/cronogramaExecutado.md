@@ -134,9 +134,9 @@ A seguir, apresentamos a Tabela 1 com a execução completo dessa entrega:
           <a href="https://github.com/VHbernardes">Victor Bernardes</a>
         </td>
         <td><a href="https://github.com/pLopess">Pedro Lopes</a></td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
-        <td>XX/XX/XX</td>
+        <td>28/05/2025</td>
+        <td>29/05/2025</td>
+        <td>29/05/2025</td>
       </tr>
       <tr>
         <td>3.2.5. Facade</td>
